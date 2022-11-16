@@ -1,35 +1,10 @@
-# Python Program to Check Prime Number -- >> الاوليه الاعداد
-
-# Program to check if a number is Prime or not
-
-num = 407
-
-
-# Prime Numbers are greater than 1
-
-if num > 1 :
+a = int(input("Enter A Number : "))
+flag = 0
+for i in range(2,a):
+    if a % i == 0:
+        print('NO Prime')
+        flag = 1
+        break
     
-    # check for factors -- >>  العوامل من تحقق
-    
-    for i in range (2,num):
-        
-        if(num % 1) == 0:
-            print(num,'is not a prime numper')
-            
-            print(i,'times',num//i,'is',num)
-            
-            break
-            
-         else:
-             
-             print(num,'is a prime numper')
-            
-            
-else:
-    
-    print(num,'is not a prime numper')
-    
-    
-            
-            
-            
+if flag == 0:
+    print('Yes Is Prime')
